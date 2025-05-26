@@ -22,8 +22,8 @@ Para rodar a aplicação é necessário ter o `DOCKER PREVIAMENTE INSTALADO`.
 
 
 - Para acessar a aplicação, abra o navegador de sua preferência:
-    * `http://localhost:8081`
+    * http://localhost:8081 ou basta clicar aqui -> [Acessar aplicação](http://localhost:8081)
 
 
 - Para verificar a % de cobertura de testes basta acessar o link abaixo:
-  * `http://localhost:63342/inventory-module/movement_stock/target/site/jacoco/com.br.movement_stock.application.service.impl/index.html`
+  * `http://localhost:63342/inventory-module/movement_stock/target/site/jacoco/com.br.movement_stock.application.service.impl/index.html` ou basta clicar aqui -> [Acessar cobertura de testes](http://localhost:63342/inventory-module/movement_stock/target/site/jacoco/com.br.movement_stock.application.service.impl/index.html)
