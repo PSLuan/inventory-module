@@ -1,0 +1,6 @@
+[submodule "inventory-api"]
+	path = inventory-api
+	url = https://github.com/PSLuan/inventory-api
+[submodule "inventory-app"]
+	path = inventory-app
+	url = https://github.com/PSLuan/inventory-app
