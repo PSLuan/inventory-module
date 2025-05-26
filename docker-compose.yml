@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16
+    container_name: stock-db
+    environment:
+      POSTGRES_USER: stock_user
+      POSTGRES_PASSWORD: stock_pass
+      POSTGRES_DB: stock_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  inventory-api:
+    container_name: inventory-api
+    build:
+      context: ./inventory-api
+      dockerfile: Dockerfile
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  inventory-app:
+    container_name: inventory-app
+    build:
+      context: ./inventory-app
+      dockerfile: Dockerfile
+    ports:
+      - "8081:81"
+    depends_on:
+      - inventory-api
+
+volumes:
+  postgres_data:
